@@ -1,0 +1,20 @@
+{% extends 'news/base.html' %}
+
+{% block title %}
+Создать Новость
+{% endblock %}
+
+{% block content %}
+<h9> {{ our_current_time }} </h9>
+    <h1> News </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task  }}<br>
+<!--        <input type="text" placeholder="Введите название:" class="form-control"><br>-->
+<!--        <textarea type="text" placeholder="Введите описание:" class="form-control"></textarea><br>-->
+        <button type="submit" class="btn btn-success">Создать Новостной Пост</button>
+        <span>{{ error }}</span>
+    </form>
+
+{% endblock %}
