@@ -44,8 +44,3 @@ class News(models.Model):
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
         ordering = ['-time_create', 'title']
-
-
-
-
-
