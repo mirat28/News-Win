@@ -6,10 +6,15 @@
 
 {% block content %}
     <h1> Новости </h1>
-    {% if tasks %}
-    {% for el in tasks %}
-        <div class="alert alert-warning mt-2">
-                <h3>{{ el.title }}</h3>
+    {% if news %}
+    {% for el in news %}
+<!--        <div class="alert alert-warning mt-2">-->
+                <div><h3>{{ el.title }}</h3>
+                    <h4>{{ el.content }}</h4>
+                    <img src="{{el.photo.url}}">
+                    <h6>{{ el.time_update }}</h6>
+                    <h7>{{ el.time_create }}</h7>
+                    <h8>{{ el.is_published }}</h8>
             <p>{{ el.task }}</p>
         </div>
         {% endfor %}

@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Task, Article
+from .models import Task, Article, News
 from .forms import TaskForm
 
 
 def index(request):
-    tasks = Task.objects.order_by('-id')
-    return render(request, 'news/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+    news = News.objects.order_by('-id')
+    News.objects.filter(is_published=True).order_by("-time_create")
+    return render(request, 'news/index.html', {'title': 'Главная страница сайта', 'news':news})
 
 
 def about(request):

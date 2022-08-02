@@ -3,7 +3,7 @@ from .models import Task
 from .models import *
 
 admin.site.register(Task)
-
+admin.site.register(News)
 
 
 class News(admin.ModelAdmin):
@@ -14,7 +14,7 @@ class News(admin.ModelAdmin):
     list_filter = ('is_published', 'time_create')
 
 
-    admin.site.register(News)
+
 
 
 
