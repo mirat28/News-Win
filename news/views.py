@@ -7,7 +7,7 @@ from .forms import TaskForm
 def index(request):
     news = News.objects.order_by('-id')
     News.objects.filter(is_published=True).order_by("-time_create")
-    return render(request, 'news/index.html', {'title': 'Главная страница сайта', 'news':news})
+    return render(request, 'news/index.html', {'title': 'Главная страница сайта', 'news': news})
 
 
 def about(request):
