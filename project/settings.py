@@ -55,8 +55,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # our context proc.
-                # 'accounts.context_processors.our_time',
             ],
         },
     },

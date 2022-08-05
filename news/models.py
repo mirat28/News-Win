@@ -8,12 +8,6 @@ class Article(models.Model):
     content = models.CharField('Описание', max_length=50)
 
 
-class UserForm(forms.Form):
-    first_name = forms.CharField(max_length=100)
-    last_name = forms.CharField(max_length=100)
-    email = forms.EmailField()
-
-
 class Task(models.Model):
     title = models.CharField('Название', max_length=50)
     task = models.TextField('Описание')
